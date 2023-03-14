@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Final Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Application Requirements
 
-## Available Scripts
+You and your group will use everything you’ve learned to create a real-world client-side single-page application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfill the following requirements:
 
-In the project directory, you can run:
+* Must use ReactJS.
 
-### `npm start`
+* Must use Node.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Must have both GET and POST routes for retrieving and adding new data.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* Must deploy this application using Netlify.
 
-### `npm test`
+* Must utilize at least two libraries, packages, or technologies that we haven't discussed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Must have a polished front end/UI.
 
-### `npm run build`
+* Must meet good quality coding standards (indentation, scoping, naming).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Presentation Requirements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Use this [project presentation template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit?usp=sharing) to address the following: 
 
-### `npm run eject`
+* Elevator pitch: a one minute description of your application.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Concept: What is your user story? What was your motivation for development?
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Process: What were the technologies used? How were tasks and group roles broken down and assigned? What challenges did you encounter? What were your successes?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Demo: Show your stuff!
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Directions for future development
 
-## Learn More
+* Links to to the deployed application and the GitHub repository
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Grading Requirements
 
-### Code Splitting
+This project is graded based on the following criteria:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Technical Acceptance Criteria: 20%
 
-### Analyzing the Bundle Size
+* Satisfies the following code requirements:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  * Application uses React.
+  
+  * Application uses Node.
+  
+  * Application uses at least two libraries, packages, or technologies that we haven't discussed.
 
-### Making a Progressive Web App
+  * Application has both GET and POST routes for retrieving and adding new data.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Concept 10%
 
-### Advanced Configuration
+* Application should be a unique and novel idea.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* Your group should clearly and concisely articulate your project idea.
 
-### Deployment
+### Deployment: 20%
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+* Application deployed at live URL using Netlify and loads with no errors.
 
-### `npm run build` fails to minify
+* Application GitHub URL submitted.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Repository Quality: 10%
+
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains a quality README file with description, screenshot, and link to deployed application.
+
+### Application Quality: 15%
+
+* Application user experience is intuitive and easy to navigate.
+
+* Application user interface style is clean and polished.
+
+* Application is responsive.
+
+### Presentation 10%
+
+* Your group should present using Powerpoint or a similar presentation software.
+
+* Every group member should speak during the presentation.
+
+* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
+
+### Collaboration 15%
+
+* There are no major disparities in the number of GitHub contributions between group members.
+
+## How to Submit Your Client-Side Single-Page Application
+
+**Each member of your group** is required to submit the following for review:
+
+* The URL of the deployed application.
+
+* The URL of the GitHub repository, with a unique name and a README describing the project.
+
+---
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
