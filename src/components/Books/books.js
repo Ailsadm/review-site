@@ -1,12 +1,21 @@
 import React from "react";
 import "./style.css";
 
-function Books(props) {
+function Books({ bookData }) {
+  console.log(bookData);
   return (
-    <div>
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">{props.name} Book Title</h5>
+    <div className="row container">
+      <div className="heading">
+
+      </div>
+      <div className="wrapper">
+        <div className="card">
+          <div>
+            <img src={bookData.cover} alt={bookData.name} />
+            {bookData.name}
+            {bookData.authors}
+          </div>
+
         </div>
       </div>
     </div>
