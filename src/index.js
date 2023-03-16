@@ -20,9 +20,7 @@ reportWebVitals();
 
 
 // NY api review
-fetch('https://api.nytimes.com/svc/books/v3/reviews.json?author=Stephen+King&api-key=bm5bc98roMnuuGGyPEBOObyprA9ft3kN')
-	.then(response => response.json())
-	.then(response => console.log(response))
+
 
   //books api
   // const options = {
