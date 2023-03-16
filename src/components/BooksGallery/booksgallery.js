@@ -31,7 +31,7 @@ async function BooksFetchResponse(){
   
     if (bookData) {
       return (
-        <Books key={bookData.id} {...bookData}></Books>
+        <Books key={bookData.id} bookData = {bookData}></Books>
       );
     } else {
       return <div>Loading...</div>;
