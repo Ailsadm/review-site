@@ -1,4 +1,5 @@
 import React from "react";
+// copied the style.css from booksGallery as this is where we re displaying the results
 import "./style.css";
 
 function Books({ bookData }) {
@@ -7,6 +8,8 @@ function Books({ bookData }) {
     // console.log();
     //SaoMEmUz0tfY5UL7hX6ivJM7EVAWm5zz
     //old 22071f1160msh3cb38f59ce444bbp11980ajsn519917436eb7
+
+    
     fetch(
       `https://api.nytimes.com/svc/books/v3/reviews.json?title=${bookData.name}&api-key=SaoMEmUz0tfY5UL7hX6ivJM7EVAWm5zz`
     )
@@ -17,11 +20,11 @@ function Books({ bookData }) {
     <div className="row container">
       <div className="card">
         <div>
-          <img src={bookData.cover} alt={bookData.name} />
-          <p>{bookData.name}</p>
-          <p>{bookData.authors}</p>
-         
-        <p>test</p>
+          <img className="bookCover" src={bookData.cover} alt={bookData.name} />
+          <p>Name: {bookData.name}</p>
+          <p>Author: {bookData.authors}</p>
+          <p>Year: {bookData.year}</p>
+          {/* /*<p>Goodreads link: {bookData.url}</p>*/}
           <button onClick={ReviewsFetch}>Reviews</button>
         </div>
       </div>
