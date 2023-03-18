@@ -1,40 +1,22 @@
-// import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BooksGallery from "./components/BooksGallery/booksgallery"
-
+import Reviews from './components/Reviews/Reviews';
 
 function App() {
   return (
-   
+    <Router>
       <div>
-        <BooksGallery></BooksGallery>
+        <Routes>
+          <Route path="/" element={<BooksGallery />} />
+          <Route path="/reviews" element={<Reviews />} />
+          
+        </Routes>
       </div>
-      );
+    </Router>
+  );
 }
 export default App;
 
-// function App() {
-  
-//   return (
-    
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={response.cover} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React and keep on practicing
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
-// export default App;
 
