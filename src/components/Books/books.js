@@ -38,7 +38,7 @@
 
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import Reviews from "../Reviews/Reviews";
+import Reviews from "../Reviews/reviews";
 import "./style.css";
 
 function Books({ bookData }) {

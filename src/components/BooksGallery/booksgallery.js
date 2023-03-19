@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Books from "../Books/books.js";
+import './style.css';
 
 let tempBookData = [
   {
@@ -162,7 +163,8 @@ function BooksGallery() {
   return (
     <div className="row container">
       <div className="heading">
-        <h2>Books</h2>
+        <h2>Search Books</h2>
+        <p className="animated-paragraph">Search through thousands of books to find your next favourite</p>
       </div>
 {/* { bookData && 'myMap...' } */}
       {bookData ? (
