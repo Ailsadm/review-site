@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./style.css";
 
 
-function Reviews() {
+function Reviews({ submitHandler }) {
   const [formData, setFormData] = useState({ name: "", rating: "", review: "" });
-  const [reviewData, setReviewData] = useState([]);
 
   const changeHandle = (fieldName, value) => {
     setFormData(previousState => {
@@ -14,27 +13,14 @@ function Reviews() {
     })
   }
 
-  const submitFormData = () => {
-    localStorage.setItem(formData.name, JSON.stringify(formData))
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    submitHandler(formData);
   }
-
-  useEffect(() => {
-    async function fetchReviews() {
-      const response = await fetch(
-        `https://api.nytimes.com/svc/books/v3/reviews.json?title=1Q84&api-key=SaoMEmUz0tfY5UL7hX6ivJM7EVAWm5zz`
-      );
-      const data = await response.json();
-      setReviewData(data.results);
-      console.log(data.results);
-    }
-
-    fetchReviews();
-  }, []);
 
   return (
     <div>
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <h3>Add your review</h3>
         <input className="inputform"
           value={formData.name}
@@ -88,9 +74,6 @@ function Reviews() {
           onChange={(e) => changeHandle('rating', "5")}
         />
         <label htmlFor="regular">5</label>
-
-
-
         <textarea className="inputform"
           value={formData.review}
           name="review"
@@ -98,20 +81,8 @@ function Reviews() {
           placeholder='Review'
           onChange={(e) => changeHandle('review', e.target.value)}
         ></textarea>
-        <button onClick={submitFormData} className="formsubmitbutton">Submit</button>
+        <button type="submit" className="formsubmitbutton">Submit</button>
       </form>
-
-      <div className="card-container">
-        {reviewData.map((review) => (
-          <div className="card" key={review.byline}>
-            <h3>{review.book_title}</h3>
-            <p>By {review.book_author}</p>
-            <p>{review.summary}</p>
-            <a href={review.url}>Read the full review</a>
-          </div>
-        ))}
-      </div>
-
     </div>
   );
 }

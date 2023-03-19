@@ -1,0 +1,23 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:5rem;
+    justify-content:space-around;
+    padding: 1rem;
+    margin: 30px;
+    width:fit-content;
+}
+
+.card {
+    background-color: #f0e8e854;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px #E8A87C, 0 3px 6px #E8A87C;
+    text-align: center;
+    overflow:hidden;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+}
