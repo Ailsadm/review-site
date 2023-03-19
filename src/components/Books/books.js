@@ -11,7 +11,7 @@
 //     //old 22071f1160msh3cb38f59ce444bbp11980ajsn519917436eb7
 //     // let bookTitle = bookData.name.split(" ").join("+")
 //     let bookTitle = bookData.name.replaceAll(' ', '+');
-    
+
 //     fetch(
 //       `https://api.nytimes.com/svc/books/v3/reviews.json?title=${bookTitle}&api-key=SaoMEmUz0tfY5UL7hX6ivJM7EVAWm5zz`
 //     )
@@ -38,7 +38,7 @@
 
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import Reviews from "../Reviews/Reviews";
+import Reviews from "../Reviews/reviews";
 import "./style.css";
 
 function Books({ bookData }) {
@@ -47,7 +47,7 @@ function Books({ bookData }) {
   const handleClick = e => {
     navigate('/reviews');
   }
-
+  console.log(handleClick);
   return (
     <div className="row container">
       <div className="card">

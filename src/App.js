@@ -1,20 +1,20 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BooksGallery from "./components/BooksGallery/booksgallery"
-import Reviews from './components/Reviews/Reviews';
+import Reviews from './components/Reviews/reviews';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 
 
 function App() {
-  return ( 
+  return (
     <Router>
       <Header></Header>
       <div>
         <Routes>
           <Route path="/" element={<BooksGallery />} />
           <Route path="/reviews" element={<Reviews />} />
-          
+
         </Routes>
       </div>
       <Footer></Footer>
