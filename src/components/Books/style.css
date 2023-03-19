@@ -8,25 +8,51 @@
     width:fit-content;
 }
 .card {
-    background: #fff;
+    padding-top: 1em;
+    background: linear-gradient(45deg, #fee3ac, #f0ebfb );
     border-radius: 2px;
-    box-shadow: 0 3px 6px #E8A87C, 0 3px 6px #E8A87C;
+    box-shadow: 0 3px 6px #f3ebe6, 0 3px 6px #e3d8e0;
     text-align: center;
     overflow:hidden;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     cursor: pointer;
     transition: transform 200ms ease-in;
+    flex-wrap: wrap;
 }
 
 h2{
     text-align: center;
     size: 20em;
 }
+
 .bookCover {
-    border: 1px solid #ddd;
+    border: 2px solid #b185af;
     border-radius: 4px;
     padding: 5px;
     width: 80px;
+    size: 40px;
+}
+button {
+    background-color: rgb(248, 247, 248);
+    padding: 0.7em 0.9em;
+    margin-bottom: 1em;
+    border-color: rgb(170, 117, 170);
+    border-radius: 0.3rem;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: small;
+    color:rgb(99, 83, 101)
+}
+button:hover {
+    background-color: rgb(178, 159, 178); 
+}
+.card p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    color:rgb(37, 11, 38);
+    padding: 0.1em;
+    margin: 0.1em;
 }

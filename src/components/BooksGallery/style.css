@@ -7,3 +7,32 @@
     padding: 1rem;
     margin: 30px;
 }
+h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: x-large;
+}
+
+.animated-paragraph{
+    animation: move-right 3s linear;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:x-large;
+    position: relative;
+    text-align: center;
+    color:rgb(69, 42, 59);
+}
+@keyframes move-right {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(500px);
+    }
+}
+.animated-paragraph:hover {
+    animation-play-state: paused;
+}
+  
+  
+  
+  
+  
