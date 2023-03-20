@@ -1,23 +1,15 @@
-import React from 'react';
-import './style.css';
-
-
+import React from "react";
+import "./style.css";
 
 function Header() {
-    return (
-      <header className="header">
-        <h1 className="header__title">Book Reviews</h1>
-        <div className="logo"></div>
-        <img src="src/components/Header/logoHeader.png" alt="logo book with message"/>
-      </header>
-    );
+  return (
+    <header className="header">
+      <h1 className="header__title">Book Reviews</h1>
+      <div className="logo-div">
+        <img classname="logo" src="/src/components/Header/logo.png" alt="logo with tagline"/>
+      </div>
+    </header>
+  );
 }
-
-
-
-
-
-
-
 
 export default Header;
