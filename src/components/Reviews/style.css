@@ -21,6 +21,9 @@
     cursor: pointer;
     transition: transform 200ms ease-in;
 }*/
+.left{
+    padding-left: 10px !important;
+}
 
 .formDiv{
     height: 22rem;
