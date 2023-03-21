@@ -1,12 +1,13 @@
 import React from "react";
 import "./style.css";
+import logo from './logo.png'
 
 function Header() {
   return (
     <header className="header">
       <h1 className="header__title">Book Reviews</h1>
       <div className="logo-div">
-        <img className="logo" src="/src/components/Header/logo.png" alt="logo with tagline" />
+        <img classname="logo" src={logo} style={{ width: 80, height: 80 }} alt="logo with tagline" />
       </div>
     </header>
   );
