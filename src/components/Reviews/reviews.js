@@ -27,6 +27,7 @@ function Reviews({ submitHandler }) {
       <form className="form" onSubmit={handleSubmit}>
         <h3>Add your review</h3>
         <input
+          
           className="inputform"
           value={formData.name}
           name="name"
@@ -34,7 +35,7 @@ function Reviews({ submitHandler }) {
           placeholder="Name"
           onChange={(e) => changeHandle("name", e.target.value)}
         ></input>
-        <input
+        <div className="left"><input
           type="radio"
           name="rating"
           value="1"
@@ -77,8 +78,9 @@ function Reviews({ submitHandler }) {
           id="5"
           checked={formData.rating === "5"}
           onChange={(e) => changeHandle("rating", "5")}
-        />
-        <label htmlFor="regular">5</label>
+        /><label htmlFor="regular">5</label></div>
+        
+        
         <textarea
           className="inputform"
           value={formData.review}
