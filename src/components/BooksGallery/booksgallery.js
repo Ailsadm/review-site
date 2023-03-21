@@ -143,7 +143,7 @@ let tempBookData = [
       "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1612178266l/56914101.jpg",
     url: "https://www.goodreads.com/choiceawards/best-poetry-books-2021",
     authors: "Amanda Gorman",
-    year: "2005",
+    year: "2020",
   },
   {
     book_id: "57190892",
@@ -220,7 +220,7 @@ function BooksGallery() {
   }, []);
 
   return (
-    <div className="row container">
+    <div className="container">
       <div className="heading">
         <h2>Search Books</h2>
         <p className="animated-paragraph">
