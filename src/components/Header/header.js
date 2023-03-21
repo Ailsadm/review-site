@@ -6,7 +6,7 @@ function Header() {
     <header className="header">
       <h1 className="header__title">Book Reviews</h1>
       <div className="logo-div">
-        <img classname="logo" src="/src/components/Header/logo.png" alt="logo with tagline"/>
+        <img className="logo" src="/src/components/Header/logo.png" alt="logo with tagline" />
       </div>
     </header>
   );

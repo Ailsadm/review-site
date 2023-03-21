@@ -5,24 +5,26 @@ import Reviews from './components/Reviews/fetchReviews';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import  Navbar  from "./components/Navbar/Navbar";
+import NavbarTest from "./components/Navbar/Navbar";
 
 
 function App() {
   return (
+
     <Router>
       <Header></Header>
-      <Navbar>
-      <div>
-        <Routes>
-          <Route path="/" element={<BooksGallery />} />
-          <Route path="/reviews" element={<Reviews />} />
-          {/* <Route path='/Navbar' element={<Navbar/>}/> */}
+      <NavbarTest />
 
-        </Routes>
-      </div>
-      </Navbar>
+      <Routes>
+        <Route path="/" element={<BooksGallery />} />
+        <Route path="/reviews" element={<Reviews />} />
+        {/* <Route path='/Navbar' element={<Navbar/>}/> */}
+
+      </Routes>
+
+
       <Footer></Footer>
+
     </Router>
   );
 }
