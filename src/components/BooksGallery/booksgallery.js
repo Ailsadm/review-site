@@ -143,7 +143,7 @@ let tempBookData = [
       "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1612178266l/56914101.jpg",
     url: "https://www.goodreads.com/choiceawards/best-poetry-books-2021",
     authors: "Amanda Gorman",
-    year: "2020",
+    year: "2005",
   },
   {
     book_id: "57190892",
