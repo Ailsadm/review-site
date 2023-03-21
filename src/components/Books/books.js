@@ -38,16 +38,17 @@
 
 import React from 'react';
 import { useNavigate } from "react-router-dom";
-import Reviews from "../Reviews/reviews";
 import "./style.css";
 
 function Books({ bookData }) {
   const navigate = useNavigate();
+  let bookTitle = bookData.name
 
   const handleClick = e => {
-    navigate('/reviews');
+    navigate(`/reviews?bookTitle=${bookTitle}`);
+    console.log(`${bookTitle}`);
   }
-  console.log(handleClick);
+  console.log(bookData);
   return (
     <div className="row container">
       <div className="card">
