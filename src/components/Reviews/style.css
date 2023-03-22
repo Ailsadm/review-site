@@ -21,14 +21,23 @@
     cursor: pointer;
     transition: transform 200ms ease-in;
 }*/
+
 .left{
     padding-left: 10px !important;
+    
+}
+.wrapperReviews {
+    display: flex;
+    justify-content:space-around;
 }
 
 .formDiv{
     height: 22rem;
+    width: 25rem;
     background-color: rgb(231, 197, 233);
     border-radius: 5px;
+    display: inline-block;
+    
 }
 h3 {
     text-align: center;

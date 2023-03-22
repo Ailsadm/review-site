@@ -31,7 +31,7 @@ function Reviews() {
     };
 
     return (
-        <div className="wrapper">
+        <div className="wrapperReviews">
             <div>
                 <ReviewForm submitHandler={submitFormData} />
             </div>
