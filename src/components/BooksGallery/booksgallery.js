@@ -220,7 +220,7 @@ function BooksGallery() {
   }, []);
 
   return (
-    <div className="container">
+    <div className="">
       <div className="heading">
         <h2>Search Books</h2>
         <p className="animated-paragraph">

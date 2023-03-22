@@ -1,5 +1,5 @@
 
-.card {
+.cardedit {
     padding-top: 1em;
     background: linear-gradient(45deg, #fee3ac, #f0ebfb );
     border-radius: 2px;
@@ -13,6 +13,8 @@
     cursor: pointer;
     transition: transform 200ms ease-in;
     /* flex-wrap: wrap; */
+    height: 23rem;
+    position: relative;
 }
 
 h2{
@@ -27,21 +29,25 @@ h2{
     width: 35%;
     /* size: 40px; */
 }
-button {
+.buttonedit {
     background-color: rgb(248, 247, 248);
     padding: 0.7em 0.9em;
     margin-bottom: 1em;
+    position: absolute;
+    bottom: 0.7rem;
     border-color: rgb(170, 117, 170);
     border-radius: 0.3rem;
     font-family: sans-serif;
     font-weight: bold;
     font-size: small;
-    color:rgb(99, 83, 101)
+    color:rgb(99, 83, 101);
+    margin-left: -40px;
+    /* margin-top: 30px; */
 }
-button:hover {
+.buttonedit:hover {
     background-color: rgb(178, 159, 178); 
 }
-.card p{
+.cardedit p{
     font-family: Arial, Helvetica, sans-serif;
     font-weight:bold;
     color:rgb(37, 11, 38);

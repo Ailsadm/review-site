@@ -50,14 +50,14 @@ function Books({ bookData }) {
   }
   console.log(bookData);
   return (
-    <div className=" container">
-      <div className="card row">
+    <div className="">
+      <div className="cardedit">
         <div>
           <img className="bookCover" src={bookData.cover} alt={bookData.name} />
           <p>Name: {bookData.name}</p>
           <p>Author: {bookData.authors}</p>
           <p>Year: {bookData.year}</p>
-          <button onClick={handleClick}>Reviews</button>
+          <button className="buttonedit"onClick={handleClick}>Reviews</button>
         </div>
       </div>
     </div>

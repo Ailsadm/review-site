@@ -4,7 +4,7 @@ import BooksGallery from "./components/BooksGallery/booksgallery"
 import Reviews from './components/Reviews/fetchReviews';
 import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarTest from "./components/Navbar/Navbar";
 
 
