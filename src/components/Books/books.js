@@ -51,7 +51,7 @@ function Books({ bookData }) {
   console.log(bookData);
   return (
     <div className=" container">
-      <div className="card row col-lg-3 col-md-6 col-sm-12">
+      <div className="card row">
         <div>
           <img className="bookCover" src={bookData.cover} alt={bookData.name} />
           <p>Name: {bookData.name}</p>

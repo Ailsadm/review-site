@@ -1,11 +1,17 @@
 /* copied the style from booksGallery into books*/
 .wrapper{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap:2rem;
     justify-content: center;
     padding: 1rem;
     margin: 30px;
+}
+@media screen and (min-width: 600px) {
+    .wrapper{
+        grid-template-columns: repeat(auto-fit, minmax(14rem, 16rem));
+    }
+    
 }
 h2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
