@@ -4,18 +4,25 @@ import "./style.css";
 function Footer() {
   return (
     <footer className="footer">
-      <ul className="footerLinks">
-        <li>
+      <div className="hyperlinks">
+        <h6>
           <a href="#">Contact</a>
-        </li>
-        <li>
+          <ul>
+            <li>Adress</li>
+            <li>142 Silvermere Road, London,SE6 4QT</li>
+          </ul>
+        </h6>
+        <h6>
           <a href="#">Blog</a>
-        </li>
-        <li>
+        </h6>
+        <h6>
           <a href="#">Socials</a>
-        </li>
-      </ul>
-      <p className="copy">© Copyright@ Book Reviews Website</p>
+        </h6>
+      </div>
+      <br></br>
+      <div>
+        <p className="copy">© Copyright@ Book Reviews Website</p>
+      </div>
     </footer>
   );
 }

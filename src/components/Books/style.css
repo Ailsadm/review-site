@@ -25,14 +25,17 @@ h2{
 .bookCover {
     border: 2px solid #b185af;
     border-radius: 4px;
-    /* padding: 5px; */
+    padding: 0.2em; 
     width: 35%;
     /* size: 40px; */
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 .buttonedit {
     background-color: rgb(248, 247, 248);
-    padding: 0.7em 0.9em;
+    padding: 0.5em 0.9em;
     margin-bottom: 1em;
+    margin-top: 5em;
     position: absolute;
     bottom: 0.7rem;
     border-color: rgb(170, 117, 170);
