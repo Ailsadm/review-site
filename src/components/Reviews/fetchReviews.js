@@ -7,7 +7,7 @@ function FetchReviews() {
     const [reviewData, setReviewData] = useState([]);
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
-    const bookTitle = searchParams.get("bookTitle").replaceAll(' ', '+');
+    let bookTitle = searchParams.get("bookTitle").replaceAll(' ', '+');
     console.log(bookTitle);
 
     //     //SaoMEmUz0tfY5UL7hX6ivJM7EVAWm5zz
@@ -30,7 +30,7 @@ function FetchReviews() {
         localStorage.setItem(formData.name, JSON.stringify(formData));
     };
     const storageItems = {...localStorage}
-    const reviews = Object.values(storageItems)
+    const reviews = Object.entries(storageItems);
     console.log(reviews)
 
     return (
@@ -51,7 +51,19 @@ function FetchReviews() {
                 </div>
             ))}
         </div>
-                <p className="userReview">{reviews}</p>
+        {reviews.map((r, i) => {
+                    // generate uuid
+                    const ratingData = JSON.parse(r[1]);
+                    bookTitle = bookTitle.split('+').join(' ');
+                    return (
+                        <div key={i}>
+                            <h4>{bookTitle}</h4>
+                            <div>Name: {ratingData.name}</div>
+                            <div>Rating: {ratingData.rating}/5</div>
+                            <div>Review: {ratingData.review}</div>
+                        </div>
+                    );
+                })}
         </div>
     );
 }
