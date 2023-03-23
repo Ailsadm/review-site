@@ -26,7 +26,8 @@ Start the server: npm start
 
 ## Contributing
 
-Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+Contributors are welcomed!
+If you'd like to contribute to this project, please follow these steps:
 Fork the repository
 Create a branch: git checkout -b feature/new-feature
 Make your changes and commit them: git commit -m 'Add new feature'
