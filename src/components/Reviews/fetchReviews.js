@@ -51,7 +51,7 @@ function FetchReviews() {
                 </div>
             ))}
         </div>
-                <p>{reviews}</p>
+                <p className="userReview">{reviews}</p>
         </div>
     );
 }

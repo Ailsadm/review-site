@@ -222,7 +222,7 @@ function BooksGallery() {
   return (
     <div className="">
       <div className="heading">
-        <h2>Search Books</h2>
+        <h2>Search results</h2>
         <p className="animated-paragraph">
           Search through thousands of books to find your next favourite
         </p>

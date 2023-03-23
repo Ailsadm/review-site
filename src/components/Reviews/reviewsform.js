@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./style.css";
 
 function ReviewsForm({ submitHandler }) {
-  const [formData, setFormData] = useState({
-    name: "",
-    rating: "",
-    review: "",
-  });
+   const [formData, setFormData] = useState({
+     name: "",
+     rating: "",
+     review: "",
+   });
 
   const changeHandle = (fieldName, value) => {
     setFormData((previousState) => {

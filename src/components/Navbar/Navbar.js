@@ -18,14 +18,14 @@ function NavbarTest() {
         <Form className="d-flex">
             <Form.Control
               type="search"
-              placeholder="Search"
+              placeholder="Search books"
               className="me-2"
               aria-label="Search"
             />
             <Button variant="outline-success">Search</Button>
           </Form>
           <Navbar.Brand href="#home"></Navbar.Brand>
-          <Nav className="me-auto">
+          <Nav className="navbar">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="#about">About</Nav.Link>
             <Nav.Link href="#pricing"></Nav.Link>
