@@ -18,15 +18,14 @@ function Footer() {
         <h6>
           <a href="#">Socials</a>
           <li>Facebook</li>
-          <li>Linkedin</li>
+          <li>LinkedIn</li>
           <li>Twitter</li>
           <li>Instagram</li>
         </h6>
       </div>
       <br></br>
-      <div>
-        <p className="copy">© Copyright@ Book Reviews Website</p>
-      </div>
+      <p className="copy">© Copyright@ Book Reviews Website</p>
+      <br></br>
     </footer>
   );
 }
