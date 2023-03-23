@@ -5,6 +5,8 @@ import Container from 'react-bootstrap/Container';
 import "./style.css"
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 function NavbarTest() {
 
@@ -13,6 +15,15 @@ function NavbarTest() {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
+        <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form>
           <Navbar.Brand href="#home"></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
