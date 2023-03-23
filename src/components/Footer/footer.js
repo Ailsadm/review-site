@@ -8,7 +8,7 @@ function Footer() {
         <h6>
           <a href="#">Contact</a>
           <ul>
-            <li>Adress</li>
+            <li>Address</li>
             <li>142 Silvermere Road, London,SE6 4QT</li>
           </ul>
         </h6>
@@ -17,6 +17,10 @@ function Footer() {
         </h6>
         <h6>
           <a href="#">Socials</a>
+          <li>Facebook</li>
+          <li>Linkedin</li>
+          <li>Twitter</li>
+          <li>Instagram</li>
         </h6>
       </div>
       <br></br>

@@ -57,10 +57,10 @@ function FetchReviews() {
                     bookTitle = bookTitle.split('+').join(' ');
                     return (
                         <div key={i}>
-                            <h3>{bookTitle}</h3>
-                            <div>{ratingData.name}</div>
-                            <div>{ratingData.rating}</div>
-                            <div>{ratingData.review}</div>
+                            <h4>{bookTitle}</h4>
+                            <div>Name: {ratingData.name}</div>
+                            <div>Rating: {ratingData.rating}/5</div>
+                            <div>Review: {ratingData.review}</div>
                         </div>
                     );
                 })}
