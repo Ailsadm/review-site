@@ -7,13 +7,13 @@ function Footer() {
       <div className="hyperlinks">
         <h6>
           <a href="#">Contact</a>
-          <ul>
-            <li>Address</li>
-            <li>142 Silvermere Road, London,SE6 4QT</li>
-          </ul>
+
+          <li>Address</li>
+          <li>142 Silvermere Road, London,SE6 4QT</li>
         </h6>
         <h6>
           <a href="#">Blog</a>
+          <li>Newsletter</li>
         </h6>
         <h6>
           <a href="#">Socials</a>
