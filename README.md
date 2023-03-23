@@ -1,4 +1,16 @@
-# Final Project
+# Team-Profile-Generator
+
+## Usage
+
+* Screenshot of page
+
+ ![Alt text](../review-site/src/assets/Capture.PNG "Title")
+
+## Deployed Application
+
+* Link to deployed application:
+
+* https://dulcet-taffy-cd0ae0.netlify.app/
 
 ## Application Requirements
 
