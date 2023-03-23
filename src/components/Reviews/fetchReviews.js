@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import "./style.css";
-import ReviewForm from "./reviews";
+import ReviewForm from "./reviewsform";
 
-function Reviews() {
+function FetchReviews() {
     const [reviewData, setReviewData] = useState([]);
     const location = useLocation();
     const searchParams = new URLSearchParams(location.search);
@@ -29,8 +29,12 @@ function Reviews() {
     const submitFormData = (formData) => {
         localStorage.setItem(formData.name, JSON.stringify(formData));
     };
+    const storageItems = {...localStorage}
+    const reviews = Object.values(storageItems)
+    console.log(reviews)
 
     return (
+        <div>
         <div className="wrapperReviews">
             <div>
                 <ReviewForm submitHandler={submitFormData} />
@@ -47,7 +51,9 @@ function Reviews() {
                 </div>
             ))}
         </div>
+                <p>{reviews}</p>
+        </div>
     );
 }
 
-export default Reviews;
+export default FetchReviews;
