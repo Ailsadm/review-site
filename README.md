@@ -1,10 +1,52 @@
-# Team-Profile-Generator
+# Title
+Books Review Site
 
-## Usage
+## Description
+Welcome to the Books Review Site! This website is a platform for book lovers to discover, rate, and review books of all genres. Users can create an account, add books to their reading list, and share their thoughts and opinions on books they have read.
+
+## Features
+
+Book search functionality
+Book rating system
+Book review system
+Reading list management
+
+## Technologies Used
+
+HTML/CSS
+JavaScript
+React
+Node.js
+Bootstrap
+
+## Installation
+Clone the repository: git clone git@github.com:Ailsadm/review-site.git
+Install dependencies: npm install
+Start the server: npm start
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+Fork the repository
+Create a branch: git checkout -b feature/new-feature
+Make your changes and commit them: git commit -m 'Add new feature'
+Push to the branch: git push origin feature/new-feature
+Submit a pull request.
+
+## Credit:
+Ailsa McGowan
+Florian Cretu - https://github.com/johndoe
+Russel Richard
+Mariana Asavoaiei
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
 
 * Screenshot of page
 
- ![Alt text](../review-site/src/assets/Capture.PNG "Title")
+ ![Alt text](../review-site/src/assets/firstPage.png"Book Reviews")
+ ![Alt text](../review-site/src/assets/secondPage.png"Book Reviews")
 
 ## Deployed Application
 
@@ -12,110 +54,8 @@
 
 * https://dulcet-taffy-cd0ae0.netlify.app/
 
-## Application Requirements
-
-You and your group will use everything you’ve learned to create a real-world client-side single-page application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfill the following requirements:
-
-* Must use ReactJS.
-
-* Must use Node.
-
-* Must have both GET and POST routes for retrieving and adding new data.
-
-* Must deploy this application using Netlify.
-
-* Must utilize at least two libraries, packages, or technologies that we haven't discussed.
-
-* Must have a polished front end/UI.
-
-* Must meet good quality coding standards (indentation, scoping, naming).
-
-* Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
-
-## Presentation Requirements
-
-Use this [project presentation template](https://docs.google.com/presentation/d/1_u8TKy5zW5UlrVQVnyDEZ0unGI2tjQPDEpA0FNuBKAw/edit?usp=sharing) to address the following: 
-
-* Elevator pitch: a one minute description of your application.
-
-* Concept: What is your user story? What was your motivation for development?
-
-* Process: What were the technologies used? How were tasks and group roles broken down and assigned? What challenges did you encounter? What were your successes?
-
-* Demo: Show your stuff!
-
-* Directions for future development
-
-* Links to to the deployed application and the GitHub repository
 
 
-## Grading Requirements
 
-This project is graded based on the following criteria:
 
-### Technical Acceptance Criteria: 20%
 
-* Satisfies the following code requirements:
-
-  * Application uses React.
-  
-  * Application uses Node.
-  
-  * Application uses at least two libraries, packages, or technologies that we haven't discussed.
-
-  * Application has both GET and POST routes for retrieving and adding new data.
-
-### Concept 10%
-
-* Application should be a unique and novel idea.
-
-* Your group should clearly and concisely articulate your project idea.
-
-### Deployment: 20%
-
-* Application deployed at live URL using Netlify and loads with no errors.
-
-* Application GitHub URL submitted.
-
-### Repository Quality: 10%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains a quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application is responsive.
-
-### Presentation 10%
-
-* Your group should present using Powerpoint or a similar presentation software.
-
-* Every group member should speak during the presentation.
-
-* Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-### Collaboration 15%
-
-* There are no major disparities in the number of GitHub contributions between group members.
-
-## How to Submit Your Client-Side Single-Page Application
-
-**Each member of your group** is required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
