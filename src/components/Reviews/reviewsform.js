@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style.css";
 
-function Reviews({ submitHandler }) {
+function ReviewsForm({ submitHandler }) {
   const [formData, setFormData] = useState({
     name: "",
     rating: "",
@@ -21,6 +21,7 @@ function Reviews({ submitHandler }) {
     event.preventDefault();
     submitHandler(formData);
   };
+  
 
   return (
     <div className="formDiv">
@@ -97,4 +98,4 @@ function Reviews({ submitHandler }) {
   );
 }
 
-export default Reviews;
+export default ReviewsForm;
