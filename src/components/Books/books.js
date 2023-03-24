@@ -7,8 +7,6 @@
 //   console.log(bookData);
 //   async function ReviewsFetch() {
 //     // console.log();
-//     //SaoMEmUz0tfY5UL7hX6ivJM7EVAWm5zz
-//     //old 22071f1160msh3cb38f59ce444bbp11980ajsn519917436eb7
 //     // let bookTitle = bookData.name.split(" ").join("+")
 //     let bookTitle = bookData.name.replaceAll(' ', '+');
 
@@ -40,6 +38,8 @@ import React from 'react';
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 
+//SaoMEmUz0tfY5UL7hX6ivJM7EVAWm5zz
+//old 22071f1160msh3cb38f59ce444bbp11980ajsn519917436eb7
 function Books({ bookData }) {
   const navigate = useNavigate();
   let bookTitle = bookData.name
@@ -57,7 +57,7 @@ function Books({ bookData }) {
           <p>Name: {bookData.name}</p>
           <p>Author: {bookData.authors}</p>
           <p>Year: {bookData.year}</p>
-          <button className="buttonedit"onClick={handleClick}>Reviews</button>
+          <button className="buttonedit" onClick={handleClick}>Reviews</button>
         </div>
       </div>
     </div>

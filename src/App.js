@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import BooksGallery from "./components/BooksGallery/booksgallery"
 import FetchReviews from './components/Reviews/fetchReviews';
@@ -9,17 +10,22 @@ import NavbarTest from "./components/Navbar/Navbar";
 
 
 function App() {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = (searchTerm) => {
+    setSearchTerm(searchTerm);
+    console.log('Search term:', searchTerm);
+  };
+
   return (
 
     <Router>
-      <Header></Header>
-      <NavbarTest />
+      <Header />
+      <NavbarTest onSearch={handleSearch} />
 
       <Routes>
-        <Route path="/" element={<BooksGallery />} />
+        <Route path="/" element={<BooksGallery searchTerm={searchTerm} />} />
         <Route path="/reviews" element={<FetchReviews />} />
-        {/* <Route path='/Navbar' element={<Navbar/>}/> */}
-
       </Routes>
 
 

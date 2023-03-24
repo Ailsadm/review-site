@@ -1,20 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Books from "../Books/books.js";
-import Reviews from "../Reviews/fetchReviews";
+import SortDropdown from "./SortResults";
+import { Nav } from 'react-bootstrap'
 import "./style.css";
 
 let tempBookData = [
-  {
-    book_id: "58283080",
-    position: "0",
-    name: "1Q84",
-    cover:
-      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1627068858i/58283080.jpg",
-    rating: 4,
-    url: "https://www.goodreads.com/book/show/58283080-hook-line-and-sinker",
-    authors: "Haruki Murakami",
-    year: "2009",
-  },
   {
     book_id: "56597885",
     name: "Beautiful World, Where Are You",
@@ -47,7 +37,7 @@ let tempBookData = [
   },
   {
     book_id: "53138095",
-    name: "A ​Court of Silver Flames (A Court of Thorns and Roses, #4)",
+    name: "A ​Court of Silver Flames (A Court of Thorns and Roses)",
     category: "Fantasy",
     cover:
       "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1602570691l/53138095.jpg",
@@ -127,7 +117,7 @@ let tempBookData = [
   },
   {
     book_id: "57282218",
-    name: "Lore Olympus: Volume One (Lore Olympus, #1)",
+    name: "Lore Olympus: Volume One (Lore Olympus)",
     category: "Graphic Novels & Comics",
     cover:
       "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1614887007l/57282218.jpg",
@@ -167,7 +157,7 @@ let tempBookData = [
   },
   {
     book_id: "54589790",
-    name: "Rule of Wolves (King of Scars, #2)",
+    name: "Rule of Wolves (King of Scars)",
     category: "Young Adult Fantasy",
     cover:
       "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1598133973l/54589790.jpg",
@@ -186,17 +176,21 @@ let tempBookData = [
     year: "2021",
   },
 ];
+// 7d2fefd150msh5be2ff45c4c2c13p1ab9fcjsnd200c7af4ce0
 
-async function BooksFetchResponse() {
+async function BooksFetchResponse({ searchTerm }) {
+  const formattedSearchTerm = searchTerm.trim().replace(/\s+/g, '+');
+
   const options = {
     method: "GET",
     headers: {
       "X-RapidAPI-Key": "7d2fefd150msh5be2ff45c4c2c13p1ab9fcjsnd200c7af4ce0",
+      // 22071f1160msh3cb38f59ce444bbp11980ajsn519917436eb7
       "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
     },
   };
   const response = await fetch(
-    "https://hapi-books.p.rapidapi.com/top/2021",
+    `https://hapi-books.p.rapidapi.com/search/${formattedSearchTerm}`,
     options
   )
     .then((response) => response.json())
@@ -206,19 +200,50 @@ async function BooksFetchResponse() {
     });
   return response;
 }
-
-function BooksGallery() {
+function BooksGallery({ searchTerm }) {
   const [bookData, setBookData] = useState([]);
+  const [filterTerm, setFilterTerm] = useState("");
+  const [sortOrder, setSortOrder] = useState("asc");
+  const [sortField, setSortField] = useState("");
+  const formattedSearchTerm = searchTerm.trim().replace(/\s+/g, '+');
+
 
   useEffect(() => {
     async function fetchData() {
-      // const data = await BooksFetchResponse();
-
-      setBookData(tempBookData);
+      if (formattedSearchTerm) {
+        const data = await BooksFetchResponse({ searchTerm: formattedSearchTerm });
+        console.log(formattedSearchTerm, data);
+        setBookData(data);
+      } else {
+        setBookData(tempBookData);
+      }
     }
-    fetchData();
-  }, []);
 
+    fetchData();
+  }, [formattedSearchTerm]);
+
+  function handleSort(field) {
+    if (sortField === field) {
+      setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+    } else {
+      setSortField(field);
+      setSortOrder("asc");
+    }
+  }
+
+  // Sort the bookData based on the current sort field and order
+  const sortedBooks = bookData.sort((a, b) => {
+    const aValue = a[sortField];
+    const bValue = b[sortField];
+
+    if (aValue < bValue) {
+      return sortOrder === "asc" ? -1 : 1;
+    }
+    if (aValue > bValue) {
+      return sortOrder === "asc" ? 1 : -1;
+    }
+    return 0;
+  });
   return (
     <div className="">
       <div className="heading">
@@ -226,13 +251,26 @@ function BooksGallery() {
         <p className="animated-paragraph">
           Search through thousands of books to find your next favourite
         </p>
+        <Nav className="filterSort">
+          <input
+            type="text"
+            placeholder="Filter the results..."
+            value={filterTerm}
+            onChange={(e) => setFilterTerm(e.target.value)}
+          />
+          <SortDropdown handleSort={handleSort} />
+        </Nav>
       </div>
-      {/* { bookData && 'myMap...' } */}
       {bookData ? (
         <div className="wrapper">
-          {bookData.map((book) => (
-            <Books key={book.book_id} bookData={book}></Books>
-          ))}
+          {sortedBooks
+            .filter((book) =>
+              // book.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+              book.name.toLowerCase().includes(filterTerm.toLowerCase())
+            )
+            .map((book) => (
+              <Books key={book.book_id} bookData={book}></Books>
+            ))}
         </div>
       ) : (
         "Loading..."
