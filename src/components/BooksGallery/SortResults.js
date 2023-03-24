@@ -11,10 +11,10 @@ function SortDropdown({ handleSort }) {
             <label htmlFor="sort">Sort by: </label>
             <select id="sort" display='start' onChange={handleChange}>
                 <option value="">Sort</option>
-                <option value="title">Title</option>
-                <option value="position">category</option>
+                <option value="name">Title</option>
+                <option value="category">category</option>
                 <option value="authors">Authors</option>
-                <option value="authors">Year</option>
+                <option value="year">Year</option>
             </select>
         </div>
     );

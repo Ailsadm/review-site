@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Books from "../Books/books.js";
-import Reviews from "../Reviews/fetchReviews";
+import SortDropdown from "./SortResults";
 import "./style.css";
 
 let tempBookData = [
@@ -210,6 +210,8 @@ async function BooksFetchResponse() {
 function BooksGallery() {
   const [bookData, setBookData] = useState([]);
   const [filterTerm, setFilterTerm] = useState("");
+  const [sortOrder, setSortOrder] = useState("asc");
+  const [sortField, setSortField] = useState("");
 
 
   useEffect(() => {
@@ -221,6 +223,28 @@ function BooksGallery() {
     fetchData();
   }, []);
 
+  function handleSort(field) {
+    if (sortField === field) {
+      setSortOrder(sortOrder === "asc" ? "desc" : "asc");
+    } else {
+      setSortField(field);
+      setSortOrder("asc");
+    }
+  }
+
+  // Sort the bookData based on the current sort field and order
+  const sortedBooks = bookData.sort((a, b) => {
+    const aValue = a[sortField];
+    const bValue = b[sortField];
+
+    if (aValue < bValue) {
+      return sortOrder === "asc" ? -1 : 1;
+    }
+    if (aValue > bValue) {
+      return sortOrder === "asc" ? 1 : -1;
+    }
+    return 0;
+  });
   return (
     <div className="">
       <div className="heading">
@@ -228,13 +252,22 @@ function BooksGallery() {
         <p className="animated-paragraph">
           Search through thousands of books to find your next favourite
         </p>
-        <input type="text" value={filterTerm} onChange={(e) => setFilterTerm(e.target.value)} />
+        <input
+          type="text"
+          value={filterTerm}
+          onChange={(e) => setFilterTerm(e.target.value)}
+        />
+        <SortDropdown handleSort={handleSort} />
       </div>
       {bookData ? (
         <div className="wrapper">
-          {bookData.filter((book) => book.name.toLowerCase().includes(filterTerm.toLowerCase())).map((book) => (
-            <Books key={book.book_id} bookData={book}></Books>
-          ))}
+          {sortedBooks
+            .filter((book) =>
+              book.name.toLowerCase().includes(filterTerm.toLowerCase())
+            )
+            .map((book) => (
+              <Books key={book.book_id} bookData={book}></Books>
+            ))}
         </div>
       ) : (
         "Loading..."
