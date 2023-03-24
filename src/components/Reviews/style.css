@@ -83,6 +83,11 @@ textarea{
     margin-left: 20px;
 }
 
-.userReviewDiv {
-    
+
+.userDivReview {
+    background-color:  #e1f0fb;
+    border-color: 1px solid rgb(222, 213, 230);
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    text-align: center;
 }

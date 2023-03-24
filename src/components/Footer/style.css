@@ -1,7 +1,9 @@
 /*Footer styles*/
 .footer {
+  display: flex;
+  align-items:flex-start;
   width: auto;
-  height: 10em;
+  height: 9em;
   background-color: rgba(234, 193, 240, 0.47);
   border-radius: 0.1em;
 } 
@@ -10,7 +12,7 @@
   display: flex;
   align-items:flex-start;
   width: 90rem;
-  height: 3em;
+  height: 6em;
   justify-content: space-around;
   
 }
@@ -38,6 +40,8 @@ a:hover {
 }
 
 .copy{
+  position: absolute;
+  bottom: -12rem;
   margin: 0 auto;
   display: block !important;
   width:fit-content;
@@ -45,7 +49,7 @@ a:hover {
   padding-top: 3rem;
   font-size: small;
   position: absolute;
-  bottom: -10rem;
+  bottom: -31rem;
 }
 footer {
   display:flex;
@@ -56,4 +60,8 @@ footer {
 li{
   list-style-type: none;
   font-size: small;
+}
+ footer h6 {
+  margin: 0.5em;
+  padding: 1em;
 }
