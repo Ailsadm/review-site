@@ -26,6 +26,7 @@ function NavbarTest({ onSearch }) {
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
+          <Nav.Link href="/">Home</Nav.Link>
           <Form className="d-flex" onSubmit={handleSearchSubmit}>
             <Form.Control
               type="search"
@@ -39,10 +40,9 @@ function NavbarTest({ onSearch }) {
           </Form>
           <Navbar.Brand href="#home"></Navbar.Brand>
           <Nav className="navbar">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-            <Nav.Link href="#pricing"></Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
             <Nav.Link href="#blog">Blog</Nav.Link>
+            <Nav.Link href="#socials">Socials</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
