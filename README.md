@@ -46,13 +46,13 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 * Screenshot of page
 
- ![Alt text](../review-site/src/assets/firstPage.png)
+ ![Homepage](../review-site/src/assets/firstPage.png)
  <br>
  <br>
  <hr>
  <br>
 
- ![Alt text](../review-site/src/assets/assets/secondPageWebsite.png)
+ ![Review page](../review-site/src/assets/secondPageWebsite.png)
 
 ## Deployed Application
 
