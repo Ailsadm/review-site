@@ -24,7 +24,7 @@ Clone the repository: git clone git@github.com:Ailsadm/review-site.git
 Install dependencies: npm install
 Start the server: npm start
 
-## Contributing
+## Contributors
 
 Contributors are welcomed!
 If you'd like to contribute to this project, please follow these steps:
