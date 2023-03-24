@@ -6,17 +6,6 @@ import "./style.css";
 
 let tempBookData = [
   {
-    book_id: "58283080",
-    position: "0",
-    name: "1Q84",
-    cover:
-      "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1627068858i/58283080.jpg",
-    rating: 4,
-    url: "https://www.goodreads.com/book/show/58283080-hook-line-and-sinker",
-    authors: "Haruki Murakami",
-    year: "2009",
-  },
-  {
     book_id: "56597885",
     name: "Beautiful World, Where Are You",
     category: "Fiction",
@@ -187,14 +176,16 @@ let tempBookData = [
     year: "2021",
   },
 ];
+// 7d2fefd150msh5be2ff45c4c2c13p1ab9fcjsnd200c7af4ce0
 
 async function BooksFetchResponse({ searchTerm }) {
   const formattedSearchTerm = searchTerm.trim().replace(/\s+/g, '+');
+
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "22071f1160msh3cb38f59ce444bbp11980ajsn519917436eb7",
-      // 7d2fefd150msh5be2ff45c4c2c13p1ab9fcjsnd200c7af4ce0
+      "X-RapidAPI-Key": "7d2fefd150msh5be2ff45c4c2c13p1ab9fcjsnd200c7af4ce0",
+      // 22071f1160msh3cb38f59ce444bbp11980ajsn519917436eb7
       "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
     },
   };
@@ -220,13 +211,14 @@ function BooksGallery({ searchTerm }) {
   useEffect(() => {
     async function fetchData() {
       if (formattedSearchTerm) {
-        // const data = await BooksFetchResponse(formattedSearchTerm);
-        console.log(formattedSearchTerm);
-        // setBookData(data);
+        const data = await BooksFetchResponse({ searchTerm: formattedSearchTerm });
+        console.log(formattedSearchTerm, data);
+        setBookData(data);
       } else {
         setBookData(tempBookData);
       }
     }
+
     fetchData();
   }, [formattedSearchTerm]);
 
