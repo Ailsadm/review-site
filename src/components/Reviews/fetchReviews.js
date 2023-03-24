@@ -36,28 +36,34 @@ function FetchReviews() {
     setReviews(bookReviews);
   };
 
+  bookTitle = bookTitle.split("+").join(" ");
   return (
     <div>
       <div className="wrapperReviews">
         <div>
           <ReviewForm submitHandler={submitFormData} />
         </div>
-        {reviewData.map((review) => (
-          <div key={review.byline} className="review">
-            <h4>Title: {review.book_title}</h4>
-            <p>Author: {review.book_author}</p>
-            <p>Review: {review.summary}</p>
-            <p>Reviewed by: {review.byline}</p>
-            <p>Date reviewed: {review.publication_dt}</p>
-            <a href={review.url}>Read the full review</a>
-            <hr />
-          </div>
-        ))}
+        {reviewData.length === 0 && reviews.length === 0 ? (
+          <p className="no-reviews-message">Have you read <span>{bookTitle}</span>? Be the first to review this book!</p>
+        ) : (
+          <>
+            {reviewData.map((review) => (
+              <div key={review.byline} className="review">
+                <h4>Title: {review.book_title}</h4>
+                <p>Author: {review.book_author}</p>
+                <p>Review: {review.summary}</p>
+                <p>Reviewed by: {review.byline}</p>
+                <p>Date reviewed: {review.publication_dt}</p>
+                <a href={review.url}>Read the full review</a>
+                <hr />
+              </div>
+            ))}
+          </>
+        )}
       </div>
       {reviews.map((r, i) => {
         // generate uuid
         // const ratingData = JSON.parse(r[1]);
-        bookTitle = bookTitle.split("+").join(" ");
         return (
           <div className="userDivReview" key={i}>
             <h4>{bookTitle}</h4>

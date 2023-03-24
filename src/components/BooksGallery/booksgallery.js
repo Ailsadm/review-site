@@ -48,7 +48,7 @@ let tempBookData = [
   },
   {
     book_id: "53138095",
-    name: "A ​Court of Silver Flames (A Court of Thorns and Roses, #4)",
+    name: "A ​Court of Silver Flames (A Court of Thorns and Roses)",
     category: "Fantasy",
     cover:
       "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1602570691l/53138095.jpg",
@@ -128,7 +128,7 @@ let tempBookData = [
   },
   {
     book_id: "57282218",
-    name: "Lore Olympus: Volume One (Lore Olympus, #1)",
+    name: "Lore Olympus: Volume One (Lore Olympus)",
     category: "Graphic Novels & Comics",
     cover:
       "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1614887007l/57282218.jpg",
@@ -168,7 +168,7 @@ let tempBookData = [
   },
   {
     book_id: "54589790",
-    name: "Rule of Wolves (King of Scars, #2)",
+    name: "Rule of Wolves (King of Scars)",
     category: "Young Adult Fantasy",
     cover:
       "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1598133973l/54589790.jpg",
