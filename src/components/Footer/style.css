@@ -3,9 +3,10 @@
   display: flex;
   align-items:flex-start;
   width: auto;
-  height: 9em;
+  height: 15em;
   background-color: rgba(234, 193, 240, 0.47);
   border-radius: 0.1em;
+  margin-top: 5em;
 } 
 
 .hyperlinks {
@@ -41,7 +42,7 @@ a:hover {
 
 .copy{
   position: absolute;
-  bottom: -12rem;
+  bottom: -20rem;
   margin: 0 auto;
   display: block !important;
   width:fit-content;
@@ -49,7 +50,7 @@ a:hover {
   padding-top: 3rem;
   font-size: small;
   position: absolute;
-  bottom: -31rem;
+  bottom: -35rem;
 }
 footer {
   display:flex;
