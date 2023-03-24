@@ -36,7 +36,7 @@ Submit a pull request.
 
 ## Credit:
 Ailsa McGowan
-Florian Cretu - https://github.com/johndoe
+Florian Cretu 
 Russel Richard
 Mariana Asavoaiei
 
