@@ -47,7 +47,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 * Screenshot of page
 
  ![Alt text](../review-site/src/assets/firstPage.png"Book Reviews")
- ![Alt text](../review-site/src/assets/secondPage.png"Book Reviews")
+ ![Alt text](../review-site/src/assets/secondPageWebsite.png"Book Reviews")
 
 ## Deployed Application
 
