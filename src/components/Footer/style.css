@@ -41,9 +41,10 @@ a:hover {
 }
 
 .copy{
-/* text-align: center; */
 align-self: center;
+display: inline;
 }
+
 footer {
   display:flex;
   flex-direction: column;
