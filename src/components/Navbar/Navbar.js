@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
-//import { Nav, na } from 'react-bootstrap/Nav';
-//import Navbar from 'react-bootstrap/Navbar';
 import "./style.css"
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -24,9 +22,9 @@ function NavbarTest({ onSearch }) {
   return (
 
     <>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" expand="md">
         <Container>
-          <Nav.Link href="/">Home</Nav.Link>
+          <Navbar.Brand href="/">Home</Navbar.Brand>
           <Form className="d-flex" onSubmit={handleSearchSubmit}>
             <Form.Control
               type="search"
@@ -38,12 +36,14 @@ function NavbarTest({ onSearch }) {
             />
             <Button type="submit" variant="outline-success">Search</Button>
           </Form>
-          <Navbar.Brand href="#home"></Navbar.Brand>
-          <Nav className="navbar">
-            <Nav.Link href="#contact">Contact</Nav.Link>
-            <Nav.Link href="#blog">Blog</Nav.Link>
-            <Nav.Link href="#socials">Socials</Nav.Link>
-          </Nav>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="navbar justify-content-end">
+              <Nav.Link href="#contact">Contact</Nav.Link>
+              <Nav.Link href="#blog">Blog</Nav.Link>
+              <Nav.Link href="#socials">Socials</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
       {/* <br />
