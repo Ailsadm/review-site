@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Books from "../Books/books.js";
 import SortDropdown from "./SortResults";
+import { Nav } from 'react-bootstrap'
 import "./style.css";
 
 let tempBookData = [
@@ -258,12 +259,15 @@ function BooksGallery({ searchTerm }) {
         <p className="animated-paragraph">
           Search through thousands of books to find your next favourite
         </p>
-        <input
-          type="text"
-          value={filterTerm}
-          onChange={(e) => setFilterTerm(e.target.value)}
-        />
-        <SortDropdown handleSort={handleSort} />
+        <Nav className="filterSort">
+          <input
+            type="text"
+            placeholder="Filter the results..."
+            value={filterTerm}
+            onChange={(e) => setFilterTerm(e.target.value)}
+          />
+          <SortDropdown handleSort={handleSort} />
+        </Nav>
       </div>
       {bookData ? (
         <div className="wrapper">
