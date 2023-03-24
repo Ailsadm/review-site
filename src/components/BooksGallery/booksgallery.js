@@ -187,16 +187,18 @@ let tempBookData = [
   },
 ];
 
-async function BooksFetchResponse() {
+async function BooksFetchResponse({ searchTerm }) {
+  const formattedSearchTerm = searchTerm.trim().replace(/\s+/g, '+');
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "7d2fefd150msh5be2ff45c4c2c13p1ab9fcjsnd200c7af4ce0",
+      "X-RapidAPI-Key": "22071f1160msh3cb38f59ce444bbp11980ajsn519917436eb7",
+      // 7d2fefd150msh5be2ff45c4c2c13p1ab9fcjsnd200c7af4ce0
       "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
     },
   };
   const response = await fetch(
-    "https://hapi-books.p.rapidapi.com/top/2021",
+    `https://hapi-books.p.rapidapi.com/search/${formattedSearchTerm}`,
     options
   )
     .then((response) => response.json())
@@ -206,22 +208,26 @@ async function BooksFetchResponse() {
     });
   return response;
 }
-
-function BooksGallery() {
+function BooksGallery({ searchTerm }) {
   const [bookData, setBookData] = useState([]);
   const [filterTerm, setFilterTerm] = useState("");
   const [sortOrder, setSortOrder] = useState("asc");
   const [sortField, setSortField] = useState("");
+  const formattedSearchTerm = searchTerm.trim().replace(/\s+/g, '+');
 
 
   useEffect(() => {
     async function fetchData() {
-      // const data = await BooksFetchResponse();
-
-      setBookData(tempBookData);
+      if (formattedSearchTerm) {
+        // const data = await BooksFetchResponse(formattedSearchTerm);
+        console.log(formattedSearchTerm);
+        // setBookData(data);
+      } else {
+        setBookData(tempBookData);
+      }
     }
     fetchData();
-  }, []);
+  }, [formattedSearchTerm]);
 
   function handleSort(field) {
     if (sortField === field) {
@@ -263,6 +269,7 @@ function BooksGallery() {
         <div className="wrapper">
           {sortedBooks
             .filter((book) =>
+              // book.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
               book.name.toLowerCase().includes(filterTerm.toLowerCase())
             )
             .map((book) => (

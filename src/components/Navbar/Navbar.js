@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 //import { Nav, na } from 'react-bootstrap/Nav';
 //import Navbar from 'react-bootstrap/Navbar';
@@ -8,21 +8,34 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-function NavbarTest() {
+function NavbarTest({ onSearch }) {
+  console.log('onSearch prop:', onSearch);
+  const [inputValue, setInputValue] = useState('');
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    onSearch(inputValue);
+  };
 
   return (
 
     <>
       <Navbar bg="dark" variant="dark">
         <Container>
-        <Form className="d-flex">
+          <Form className="d-flex" onSubmit={handleSearchSubmit}>
             <Form.Control
               type="search"
               placeholder="Search books"
               className="me-2"
               aria-label="Search"
+              value={inputValue}
+              onChange={handleInputChange}
             />
-            <Button variant="outline-success">Search</Button>
+            <Button type="submit" variant="outline-success">Search</Button>
           </Form>
           <Navbar.Brand href="#home"></Navbar.Brand>
           <Nav className="navbar">

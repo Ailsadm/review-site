@@ -9,7 +9,7 @@ function Header() {
       <h1 className="header__title">Book Reviews</h1>
       <div className="logo-div">
         <img
-          classname="logo"
+          className="logo"
           src={logo}
           style={{ width: 88, height: 80 }}
           alt="logo with tagline: Read freely"
