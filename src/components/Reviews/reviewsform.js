@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import "./style.css";
 
 function ReviewsForm({ submitHandler }) {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: "",
     rating: "",
     review: "",
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData)
 
   const changeHandle = (fieldName, value) => {
     setFormData((previousState) => {
@@ -20,8 +22,12 @@ function ReviewsForm({ submitHandler }) {
   const handleSubmit = (event) => {
     event.preventDefault();
     submitHandler(formData);
+    resetForm();
   };
 
+  const resetForm = () => {
+    setFormData(initialFormData);
+  };
 
   return (
     <div className="formDiv">

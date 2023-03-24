@@ -5,6 +5,7 @@ import ReviewForm from "./reviewsform";
 
 function FetchReviews() {
   const [reviewData, setReviewData] = useState([]);
+  const [reviews, setReviews] = useState([]);
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   let bookTitle = searchParams.get("bookTitle").replaceAll(" ", "+");
@@ -24,14 +25,16 @@ function FetchReviews() {
 
   useEffect(() => {
     fetchReviews();
+    const storedReviews = JSON.parse(localStorage.getItem(bookTitle)) || [];
+    setReviews(storedReviews);
   }, []);
 
   const submitFormData = (formData) => {
-    localStorage.setItem(formData.name, JSON.stringify(formData));
+    const bookReviews = JSON.parse(localStorage.getItem(bookTitle)) || [];
+    bookReviews.push(formData);
+    localStorage.setItem(bookTitle, JSON.stringify(bookReviews));
+    setReviews(bookReviews);
   };
-  const storageItems = { ...localStorage };
-  const reviews = Object.entries(storageItems);
-  console.log(reviews);
 
   return (
     <div>
@@ -53,14 +56,14 @@ function FetchReviews() {
       </div>
       {reviews.map((r, i) => {
         // generate uuid
-        const ratingData = JSON.parse(r[1]);
+        // const ratingData = JSON.parse(r[1]);
         bookTitle = bookTitle.split("+").join(" ");
         return (
           <div className="userDivReview" key={i}>
             <h4>{bookTitle}</h4>
-            <div>Name: {ratingData.name}</div>
-            <div>Rating: {ratingData.rating}/5</div>
-            <div>Review: {ratingData.review}</div>
+            <div>Name: {r.name}</div>
+            <div>Rating: {r.rating}/5</div>
+            <div>Review: {r.review}</div>
           </div>
         );
       })}
