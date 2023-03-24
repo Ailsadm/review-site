@@ -209,6 +209,8 @@ async function BooksFetchResponse() {
 
 function BooksGallery() {
   const [bookData, setBookData] = useState([]);
+  const [filterTerm, setFilterTerm] = useState("");
+
 
   useEffect(() => {
     async function fetchData() {
@@ -226,11 +228,11 @@ function BooksGallery() {
         <p className="animated-paragraph">
           Search through thousands of books to find your next favourite
         </p>
+        <input type="text" value={filterTerm} onChange={(e) => setFilterTerm(e.target.value)} />
       </div>
-      {/* { bookData && 'myMap...' } */}
       {bookData ? (
         <div className="wrapper">
-          {bookData.map((book) => (
+          {bookData.filter((book) => book.name.toLowerCase().includes(filterTerm.toLowerCase())).map((book) => (
             <Books key={book.book_id} bookData={book}></Books>
           ))}
         </div>
