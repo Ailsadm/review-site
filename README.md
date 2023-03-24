@@ -43,7 +43,6 @@ Mariana Asavoaiei
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-
 * Screenshot of page
 
  ![Homepage](./public/assets/firstPage.png)
@@ -52,7 +51,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
  <hr>
  <br>
 
- ![Review page](./public/assets/secondPageWebsite.png)
+![Review page](./public/assets/secondPageWebsite.png)
 
 ## Deployed Application
 
