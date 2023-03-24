@@ -46,8 +46,11 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 * Screenshot of page
 
- ![Alt text](../review-site/src/assets/firstPage.png"Book Reviews")
- ![Alt text](../review-site/src/assets/secondPage.png"Book Reviews")
+![firstPage (1)](https://user-images.githubusercontent.com/116603793/227532501-d75f7966-4601-4a4f-b597-92b61d6638e1.png)
+
+
+![secondPage](https://user-images.githubusercontent.com/116603793/227532568-4b845656-c8f0-46b4-a408-fc8d233c1990.png)
+
 
 ## Deployed Application
 
