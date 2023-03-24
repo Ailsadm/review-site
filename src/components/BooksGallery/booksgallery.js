@@ -184,8 +184,8 @@ async function BooksFetchResponse({ searchTerm }) {
   const options = {
     method: "GET",
     headers: {
-      "X-RapidAPI-Key": "7d2fefd150msh5be2ff45c4c2c13p1ab9fcjsnd200c7af4ce0",
-      // 22071f1160msh3cb38f59ce444bbp11980ajsn519917436eb7
+      "X-RapidAPI-Key": "22071f1160msh3cb38f59ce444bbp11980ajsn519917436eb7",
+      // 7d2fefd150msh5be2ff45c4c2c13p1ab9fcjsnd200c7af4ce0
       "X-RapidAPI-Host": "hapi-books.p.rapidapi.com",
     },
   };
